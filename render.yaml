@@ -5,13 +5,13 @@ services:
     plan: free
     dockerfilePath: ./Dockerfile
     envVars:
-      - key: SPRING_DATASOURCE_URL
+      - key: spring.datasource.url
         value: jdbc:postgresql://ep-sparkling-boat-a5itk0n4-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
-      - key: SPRING_DATASOURCE_USERNAME
+      - key: spring.datasource.username
         value: neondb_owner
-      - key: SPRING_DATASOURCE_PASSWORD
+      - key: spring.datasource.password
         value: npg_Bhpx7rRa4WSj
-      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+      - key: spring.jpa.hibernate.ddl-auto
         value: update
-      - key: SPRING_JPA_DATABASE_PLATFORM
+      - key: spring.jpa.database-platform
         value: org.hibernate.dialect.PostgreSQLDialect
