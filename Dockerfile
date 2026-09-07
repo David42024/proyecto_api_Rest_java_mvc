@@ -9,4 +9,4 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENV PORT=8080
-CMD ["java", "-jar", "-Dspring.profiles.active=prod", "-Dserver.port=$PORT", "app.jar"]
+CMD ["sh", "-c", "java -jar -Dspring.profiles.active=prod -Dserver.port=$PORT app.jar"]
