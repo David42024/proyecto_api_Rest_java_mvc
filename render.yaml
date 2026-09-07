@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: demo-spring-boot
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: postgresql://neondb_owner:npg_Bhpx7rRa4WSj@ep-sparkling-boat-a5itk0n4-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+      - key: SPRING_DATASOURCE_USERNAME
+        value: neondb_owner
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: npg_Bhpx7rRa4WSj
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
+      - key: SPRING_JPA_DATABASE_PLATFORM
+        value: org.hibernate.dialect.PostgreSQLDialect
